@@ -1,21 +1,22 @@
-fn main() {
-	// addition
-	let sum = 5550 + 7310;
-	println!("The sum of 5550 and 7310 = {}", sum);
+// Rust program to output name and change
 
-	// subtraction
-	let difference = 95.5 - 4.3;
-	println!("The difference of 95.5 and 4.3 = {}", difference);
+ use std::io;
+ fn main() {
+    println!("\nStudent Information Management System!");
 
-	// multiplication
-	let product:f32 = 4.0 * 30.0;
-	println!("The multiple of 4 and 30 = {}", product);
+    // input name
+    println!("\nPlease Enter your name.");
+    let mut name = String::new();
+        io::stdin()
+        .read_line(&mut name)
+        .expect("Failed to read input");
+    println!("Your name is: {}", name);
 
-	// division
-	let quotient:f32 = 56.7 / 32.2;
-	println!("The division of 56.7 and 32.2 = {}", quotient);
+    // input age
+    println!("\nEnter your age.");
+    let mut age = String::new();
+        io::stdin().read_line(&mut age).expect("Failed to read input");
+    let age:i32 = age.trim().parse().expect("Input not an integer");
+    println!("Your age is: {}", age);
+ }
 
-	// remainder
-	let remainder = 43 % 5;
-	println!("The remainder of 43 and 5 = {}", remainder);
-}
